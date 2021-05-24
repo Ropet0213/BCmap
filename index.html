@@ -1,41 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
 
-	<title>404 HTML Template by Colorlib</title>
+#myImg1 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 480px;
+  top : 258px;
+}
 
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
+#myImg1:hover {
+  opacity: 0.7;
+}
 
-	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+#myImg2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 540px;
+  top : 400px;
+}
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+#myImg2:hover {
+  opacity: 0.7;
+}
 
+#myImg3 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 312px;
+  top : 543px;
+}
+
+#myImg3:hover {
+  opacity: 0.7;
+}
+
+#myImg4 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 470px;
+  top : 520px;
+}
+
+#myImg4:hover {
+  opacity: 0.7;
+}
+
+#myImg5 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 360px;
+  top : 630px;
+}
+
+#myImg5:hover {
+  opacity: 0.7;
+}
+
+#myImg6 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 500px;
+  top : 630px;
+}
+
+#myImg6:hover {
+  opacity: 0.7;
+}
+
+#myImg7 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 655px;
+  top : 630px;
+}
+
+#myImg7:hover {
+  opacity: 0.7;
+}
+
+#myImg8 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 680px;
+  top : 510px;
+}
+
+#myImg8:hover {
+  opacity: 0.7;
+}
+
+#myImg9 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 790px;
+  top : 460px;
+}
+
+#myImg9:hover {
+  opacity: 0.7;
+}
+
+#myImg10 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 820px;
+  top : 630px;
+}
+
+#myImg10:hover {
+  opacity: 0.7;
+}
+
+#myImg11 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 170px;
+  top : 770px;
+}
+
+#myImg11:hover {
+  opacity: 0.7;
+}
+
+#myImg12 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position : absolute ;
+  left : 380px;
+  top : 770px;
+}
+
+#myImg12:hover {
+  opacity: 0.7;
+}
+
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
 </head>
-
 <body>
 
-	<div id="notfound">
-		<div class="notfound">
-			<div class="notfound-404">
-				<h1>Bungie!</h1>
-				<h2>404 - I want to play destiny 2</h2>
-			</div>
-			<a href="#">Go TO Homepage</a>
-		</div>
-	</div>
+<h2>우리 동네 생태 지도</h2>
+<img src="https://obj-sg.thewiki.kr/data/ebb680ecb29cebb295eca0952e6a7067.jpg"style="width:100%;max-width:1000px">
+<!-- 대장동 -->
+<a class="myImages" id="myImg1" href="https://upload.wikimedia.org/wikipedia/commons/7/7b/Orange-Whole-%26-Split.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 오정동 -->
+<a class="myImages" id="myImg2" href="https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 삼정동 -->
+<a class="myImages" id="myImg3" href="https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 내동 -->
+<a class="myImages" id="myImg4" href="https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 약대동 -->
+<a class="myImages" id="myImg5" href="https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 도당동 -->
+<a class="myImages" id="myImg6" href="https://upload.wikimedia.org/wikipedia/commons/7/7b/Orange-Whole-%26-Split.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 여월동 -->
+<a class="myImages" id="myImg7" href="https://upload.wikimedia.org/wikipedia/commons/7/7b/Orange-Whole-%26-Split.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 원종동 -->
+<a class="myImages" id="myImg8" href="https://upload.wikimedia.org/wikipedia/commons/7/7b/Orange-Whole-%26-Split.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 고강동 -->
+<a class="myImages" id="myImg9" href="https://upload.wikimedia.org/wikipedia/commons/7/7b/Orange-Whole-%26-Split.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 작동 -->
+<a class="myImages" id="myImg10" href="https://upload.wikimedia.org/wikipedia/commons/7/7b/Orange-Whole-%26-Split.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 상동 -->
+<a class="myImages" id="myImg11" href="https://upload.wikimedia.org/wikipedia/commons/7/7b/Orange-Whole-%26-Split.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
+<!-- 중동 -->
+<a class="myImages" id="myImg12" href="https://upload.wikimedia.org/wikipedia/commons/7/7b/Orange-Whole-%26-Split.jpg" target="_blank">
+  <img src="https://i.ibb.co/zx3kwGK/588891ecbc2fc2ef3a1860a4.png" alt="description" style="width:100%;max-width:50px">
+</a>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
+<!-- The Modal -->
+<div id="myModal" class=" modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<div id="myModal" class=" modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(e) {
+    e.preventDefault()
+    modal.style.display = "block";
+    modalImg.src = this.href;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+</body>
 </html>
